@@ -26,6 +26,11 @@ function App() {
     setData(products)
    
   }
+  // useEffect(()=>{
+  //   getData()
+    
+  // //  console.log(data)
+  // }, [])
 
   const getDataWithPromise = ()=> {
     return new Promise((resolve, reject)=>{
@@ -48,16 +53,12 @@ useEffect(()=>{
   })
   .then(res=>{
     setDataIsReady(true)
-    console.log(res)
+    // console.log(res)
     return res
   })
 },[])
 
-  // useEffect(()=>{
-  //   getData()
-    
-  //  console.log(data)
-  // }, [dataIsReady])
+
 
   return (
     <div className="App">
